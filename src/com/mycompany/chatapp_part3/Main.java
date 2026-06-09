@@ -21,9 +21,8 @@ public class Main {
         Message message = new Message();
 
         boolean loggedIn = false;
-// ===============================
-// TEST LOGIN INPUT (GUIDE)
-// ===============================
+// 
+// TEST LOGIN INPUT GUIDE
 // Username: vincent_j
 // Surname: Jonas
 // Phone number: 0812345678
