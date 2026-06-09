@@ -9,10 +9,14 @@
  */
 package com.mycompany.chatapp_part3;
 
+/**
+ *
+ * @author Student
+ */
 public class Login {
 
     public boolean checkUsername(String username) {
-        return username != null && username.contains("_") && username.length() >= 3;
+        return username != null && username.contains("_") && username.length() >= 3; // checking username
     }
 
     public boolean checkSurname(String surname) {
@@ -24,8 +28,8 @@ public class Login {
     }
 
     public boolean loginUser(String username, String surname, String phone) {
-        return checkUsername(username) &&
-               checkSurname(surname) &&
-               checkPhoneNumber(phone);
+        return checkUsername(username)
+                && checkSurname(surname)
+                && checkPhoneNumber(phone);
     }
 }
