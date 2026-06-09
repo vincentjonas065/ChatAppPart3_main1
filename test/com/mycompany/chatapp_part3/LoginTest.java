@@ -1,12 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Student
- */
 package com.mycompany.chatapp_part3;
 
 import org.junit.Before;
@@ -22,21 +13,25 @@ public class LoginTest {
         login = new Login();
     }
 
+    // Tests valid username format
     @Test
     public void testValidUsername() {
         assertTrue(login.checkUsername("vincent_j"));
     }
 
+    // Tests invalid username format
     @Test
     public void testInvalidUsername() {
         assertFalse(login.checkUsername("vincent"));
     }
 
+    // Tests valid phone number input
     @Test
     public void testValidPhone() {
         assertTrue(login.checkPhoneNumber("0812345678"));
     }
 
+    // Tests invalid phone number input
     @Test
     public void testInvalidPhone() {
         assertFalse(login.checkPhoneNumber("abc123"));
