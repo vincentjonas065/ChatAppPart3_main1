@@ -7,6 +7,8 @@
  *
  * @author Student
  */
+
+    // Stores and manages user messages
 package com.mycompany.chatapp_part3;
 
 import java.util.ArrayList;
