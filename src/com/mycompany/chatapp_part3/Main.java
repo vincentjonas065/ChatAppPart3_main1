@@ -12,6 +12,9 @@ package com.mycompany.chatapp_part3;
 
 import java.util.Scanner;
 
+/**
+ * Main class - runs a simple console-based login and messaging system
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -21,13 +24,15 @@ public class Main {
         Message message = new Message();
 
         boolean loggedIn = false;
-// 
-// TEST LOGIN INPUT GUIDE
-// Username: vincent_j
-// Surname: Jonas
-// Phone number: 0812345678
+
+        // Sample login details for testing
+        // Username: vincent_j
+        // Surname: Jonas
+        // Phone number: 0812345678
+
         while (true) {
 
+            // Menu options
             System.out.println("\n1. Login");
             System.out.println("2. Send Message");
             System.out.println("3. View Messages");
@@ -40,6 +45,7 @@ public class Main {
 
             switch (choice) {
 
+                // Handle user login
                 case 1:
                     System.out.print("Username: ");
                     String u = input.nextLine();
@@ -55,6 +61,7 @@ public class Main {
                     System.out.println(loggedIn ? "Login success" : "Login failed");
                     break;
 
+                // Send a message (only if logged in)
                 case 2:
                     if (loggedIn) {
                         System.out.print("Message: ");
@@ -64,6 +71,7 @@ public class Main {
                     }
                     break;
 
+                // View all messages
                 case 3:
                     if (loggedIn) {
                         System.out.println(message.getMessages());
@@ -72,6 +80,7 @@ public class Main {
                     }
                     break;
 
+                // Show longest message
                 case 4:
                     if (loggedIn) {
                         System.out.println("Longest: " + message.getLongestMessage());
@@ -80,6 +89,7 @@ public class Main {
                     }
                     break;
 
+                // Exit program
                 case 5:
                     System.out.println("Goodbye");
                     return;
