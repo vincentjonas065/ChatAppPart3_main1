@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
-
 package com.mycompany.chatapp_part3;
 
 import org.junit.Before;
@@ -18,18 +13,21 @@ public class MessageTest {
         message = new Message();
     }
 
+    // Tests that a message is successfully added
     @Test
     public void testSendMessage() {
         message.sendMessage("Hello");
         assertEquals(1, message.getMessageCount());
     }
 
+    // Tests that stored messages contain the correct value
     @Test
     public void testMessageStored() {
         message.sendMessage("Hi");
         assertTrue(message.getMessages().contains("Hi"));
     }
 
+    // Tests that message count increases correctly
     @Test
     public void testMessageCountIncrease() {
         int before = message.getMessageCount();
@@ -37,6 +35,7 @@ public class MessageTest {
         assertEquals(before + 1, message.getMessageCount());
     }
 
+    // Tests that longest message is correctly identified
     @Test
     public void testLongestMessage() {
         message.sendMessage("short");
@@ -45,12 +44,14 @@ public class MessageTest {
         assertEquals("this is the longest message", message.getLongestMessage());
     }
 
+    // Tests behaviour when no messages exist
     @Test
     public void testEmptyLongestMessage() {
         Message m = new Message();
         assertNull(m.getLongestMessage());
     }
 
+    // Ensures getMessages never returns null
     @Test
     public void testGetMessagesNotNull() {
         assertNotNull(message.getMessages());
