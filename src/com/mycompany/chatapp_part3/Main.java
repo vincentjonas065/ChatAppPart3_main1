@@ -7,6 +7,7 @@
  *
  * @author Student
  */
+// Simple console menu for login and messaging system
 package com.mycompany.chatapp_part3;
 
 import java.util.Scanner;
